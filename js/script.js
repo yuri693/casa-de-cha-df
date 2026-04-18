@@ -2,6 +2,16 @@
    CASA DE CHÁ DO DF — script.js
    ========================================= */
 
+// ---- SCROLL PROGRESS BAR ----
+const scrollProgress = document.getElementById('scroll-progress');
+function updateScrollProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  if (scrollProgress) scrollProgress.style.width = pct + '%';
+}
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
 // ---- NAV SCROLL ----
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -147,6 +157,56 @@ window.addEventListener('scroll', () => {
     heroBg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
   }
 }, { passive: true });
+
+// ---- CUSTOM CURSOR ----
+(function () {
+  // Só ativa em dispositivos com mouse
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  const dot  = document.createElement('div');
+  const ring = document.createElement('div');
+  dot.className  = 'cursor-dot';
+  ring.className = 'cursor-ring';
+  document.body.appendChild(dot);
+  document.body.appendChild(ring);
+
+  let mx = -100, my = -100;
+  let rx = -100, ry = -100;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
+  });
+
+  // Ring segue com suavidade via lerp
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  (function loop() {
+    rx = lerp(rx, mx, 0.14);
+    ry = lerp(ry, my, 0.14);
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(loop);
+  })();
+
+  // Estado hover em links e botões
+  const hoverEls = document.querySelectorAll('a, button, .tab, .cha-card, .gal-card');
+  hoverEls.forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+  });
+
+  // Esconder ao sair da janela
+  document.addEventListener('mouseleave', () => {
+    dot.style.opacity  = '0';
+    ring.style.opacity = '0';
+  });
+  document.addEventListener('mouseenter', () => {
+    dot.style.opacity  = '1';
+    ring.style.opacity = '1';
+  });
+})();
 
 // Hover dos cards de chá gerenciado pelo CSS (.cha-card:hover)
 

@@ -1405,3 +1405,311 @@ img { max-width: 100%; display: block; }
 
   .sobre, .chas, .galeria, .menu, .depos, .contato { padding: 4rem 0; }
 }
+
+/* =========================================
+   ENHANCEMENTS — PART III
+   ========================================= */
+
+/* ---- CUSTOM SCROLLBAR ---- */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+/* ---- SCROLL PROGRESS BAR ---- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), #e8c97a);
+  z-index: 9999;
+  transition: width 0.08s linear;
+  box-shadow: 0 0 8px rgba(181,146,74,0.5);
+}
+
+/* ---- GRAIN TEXTURE OVERLAY ---- */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ---- HERO DOT GRID ---- */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(181,146,74,0.18) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ---- HERO LARGE DECORATIVE BACKDROP ---- */
+.hero::before {
+  content: '◇';
+  position: absolute;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%) rotate(15deg);
+  font-size: clamp(20rem, 36vw, 46rem);
+  line-height: 1;
+  color: rgba(181,146,74,0.04);
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-display);
+  z-index: 1;
+}
+
+/* ---- HERO STEAM ANIMATION ---- */
+.hero-steam {
+  position: absolute;
+  bottom: 12%;
+  right: 12%;
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.45;
+}
+
+.hero-steam span {
+  display: block;
+  width: 2px;
+  border-radius: 99px;
+  background: linear-gradient(to top, var(--gold), transparent);
+  animation: steamRise 3s ease-in-out infinite;
+}
+
+.hero-steam span:nth-child(1) { height: 48px; animation-delay: 0s; }
+.hero-steam span:nth-child(2) { height: 72px; animation-delay: 0.6s; }
+.hero-steam span:nth-child(3) { height: 56px; animation-delay: 1.2s; }
+.hero-steam span:nth-child(4) { height: 64px; animation-delay: 0.3s; }
+.hero-steam span:nth-child(5) { height: 44px; animation-delay: 0.9s; }
+
+@keyframes steamRise {
+  0%   { transform: translateY(0) scaleX(1); opacity: 0.7; }
+  40%  { transform: translateY(-28px) scaleX(1.5); opacity: 0.4; }
+  100% { transform: translateY(-60px) scaleX(0.5); opacity: 0; }
+}
+
+/* ---- CUSTOM CURSOR ---- */
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease, opacity 0.3s ease;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(181,146,74,0.55);
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, opacity 0.3s ease;
+}
+
+.cursor-ring.hovered {
+  width: 52px; height: 52px;
+  border-color: var(--gold);
+}
+
+@media (hover: none) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* ---- SECTION HEADER ORNAMENT ---- */
+.section-header h2::after {
+  content: '';
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+  opacity: 0.7;
+}
+
+/* ---- STATS HOVER GLOW ---- */
+.stat {
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+.stat:hover {
+  transform: translateY(-3px);
+}
+.stat:hover strong {
+  text-shadow: 0 0 30px rgba(181,146,74,0.3);
+}
+
+/* ---- TEA CARD LEFT ACCENT BARS ---- */
+.cha-card {
+  border-left: 3px solid transparent;
+  transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+.cha-card:nth-child(1):hover { border-left-color: #6a9e5e; }
+.cha-card:nth-child(2):hover { border-left-color: #b5764a; }
+.cha-card:nth-child(3):hover { border-left-color: #4a7ab5; }
+.cha-card:nth-child(4):hover { border-left-color: #a8a8a8; }
+.cha-card:nth-child(5):hover { border-left-color: #7a6245; }
+.cha-card:nth-child(6):hover { border-left-color: #8f6ab5; }
+
+/* ---- GALLERY DEPTH GRADIENT ---- */
+.gal-card::after {
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(10, 8, 5, 0.35) 70%,
+    rgba(10, 8, 5, 0.72) 100%
+  ), radial-gradient(ellipse at 50% 100%, rgba(10,8,5,0.4) 0%, transparent 70%);
+}
+
+/* ---- TESTIMONIAL LARGE QUOTE MARK ---- */
+.depo::before {
+  content: '\201C';
+  position: absolute;
+  top: 1.2rem;
+  left: 1.8rem;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.18;
+  pointer-events: none;
+}
+.depo { position: relative; }
+
+/* ---- FOOTER SVG SOCIAL ICONS ---- */
+.social-links a svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  transition: transform 0.25s ease;
+}
+.social-links a:hover svg {
+  transform: scale(1.2);
+}
+
+/* ---- MARQUEE BAR SUBTLE GRADIENT BORDERS ---- */
+.marquee-bar {
+  border-top: 1px solid rgba(181,146,74,0.15);
+  border-bottom: 1px solid rgba(181,146,74,0.15);
+}
+
+/* ---- NAV BACKDROP BLUR (scrolled) ---- */
+.nav.scrolled {
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}
+
+/* ---- BUTTON SHIMMER ON HOVER ---- */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
+.btn-primary:hover::after {
+  left: 150%;
+}
+
+/* ---- FOOTER BRAND TAGLINE UNDERLINE ---- */
+.footer-brand p {
+  border-left: 2px solid rgba(181,146,74,0.3);
+  padding-left: 1rem;
+  margin-top: 1rem;
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* ---- INFO ITEMS ICON GLOW ---- */
+.info-icon {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.info-item:hover .info-icon {
+  box-shadow: 0 0 0 6px rgba(181,146,74,0.1);
+  transform: scale(1.08);
+}
+
+/* ---- MENU ITEMS HOVER LINE ---- */
+.menu-item {
+  position: relative;
+  overflow: hidden;
+}
+.menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 1px;
+  width: 0;
+  background: rgba(181,146,74,0.3);
+  transition: width 0.4s ease;
+}
+.menu-item:hover::before { width: 100%; }
+
+/* ---- SOBRE BADGE PULSE ---- */
+.sobre-badge {
+  animation: badgePulse 4s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 8px 32px rgba(181,146,74,0.25); }
+  50%       { box-shadow: 0 8px 48px rgba(181,146,74,0.5), 0 0 0 8px rgba(181,146,74,0.08); }
+}
+
+/* ---- HERO EYEBROW DOT ---- */
+.hero-eyebrow::before {
+  content: '◆';
+  font-size: 0.5em;
+  margin-right: 0.6em;
+  color: var(--gold);
+  vertical-align: middle;
+}
+
+/* ---- LABEL TRACK LINES ---- */
+.label::before,
+.label::after {
+  content: '——';
+  letter-spacing: -0.15em;
+  opacity: 0.4;
+  margin: 0 0.6em;
+}
+
+/* ---- SCROLL ANIMATION IMPROVEMENT ---- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
