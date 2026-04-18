@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casa de Chá do Distrito Federal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="logo">
+        <span class="logo-icon">&#9670;</span>
+        <span>Casa de Chá <em>DF</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#chás">Chás</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato" class="btn-nav">Reservar Mesa</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#chás">Chás</a>
+      <a href="#menu">Menu</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Reservar Mesa</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Brasília · Desde 2008</p>
+      <h1>Um Ritual<br/><em>de Prazer</em></h1>
+      <p class="hero-sub">Mais de 80 variedades de chás raros do mundo inteiro,<br/>servidos no coração do Plano Piloto.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn-primary">Explorar o Menu</a>
+        <a href="#contato" class="btn-ghost">Fazer Reserva</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Role para baixo</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE DESTAQUE -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>Chá Verde Sencha</span>
+      <span class="dot">&#9670;</span>
+      <span>Darjeeling First Flush</span>
+      <span class="dot">&#9670;</span>
+      <span>Oolong Taiwanese</span>
+      <span class="dot">&#9670;</span>
+      <span>Pu-erh Envelhecido</span>
+      <span class="dot">&#9670;</span>
+      <span>Branco Silver Needle</span>
+      <span class="dot">&#9670;</span>
+      <span>Matcha Cerimonial</span>
+      <span class="dot">&#9670;</span>
+      <span>Rooibos Sul-africano</span>
+      <span class="dot">&#9670;</span>
+      <span>Erva-mate do Sul</span>
+      <span class="dot">&#9670;</span>
+      <span>Camomila Orgânica</span>
+      <span class="dot">&#9670;</span>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container split">
+      <div class="split-text">
+        <span class="label">Nossa História</span>
+        <h2>Uma Jornada<br/>pelo Mundo do Chá</h2>
+        <p>Fundada em 2008 por Ana Luísa Ferreira, a Casa de Chá do DF nasceu de uma paixão cultivada em viagens pelo Japão, China e Índia. Aqui, cada xícara conta uma história — de regiões remotas, colheitas únicas e séculos de tradição.</p>
+        <p>Nossa sommelier de chás viaja anualmente para selecionar pessoalmente os melhores lotes das principais regiões produtoras, garantindo uma experiência sensorial sem igual em Brasília.</p>
+        <div class="sobre-stats">
+          <div class="stat">
+            <strong>80+</strong>
+            <span>Variedades de chá</span>
+          </div>
+          <div class="stat">
+            <strong>16</strong>
+            <span>Anos de história</span>
+          </div>
+          <div class="stat">
+            <strong>12</strong>
+            <span>Países de origem</span>
+          </div>
+        </div>
+      </div>
+      <div class="split-visual">
+        <div class="img-placeholder sobre-img">
+          <div class="img-inner">
+            <div class="tea-svg">
+              <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="100" cy="160" rx="70" ry="15" fill="#c9b99a" opacity="0.3"/>
+                <path d="M55 90 Q50 140 60 160 Q80 180 100 182 Q120 180 140 160 Q150 140 145 90 Z" fill="#f5efe6" stroke="#c4a882" stroke-width="1.5"/>
+                <path d="M55 90 Q80 85 100 87 Q120 85 145 90" fill="none" stroke="#c4a882" stroke-width="1.5"/>
+                <path d="M145 110 Q160 108 162 118 Q163 128 148 130" fill="none" stroke="#c4a882" stroke-width="1.5"/>
+                <path d="M70 60 Q72 40 85 35 Q90 50 82 65" fill="#8fa87d" opacity="0.8"/>
+                <path d="M95 55 Q97 30 110 28 Q117 45 106 60" fill="#7a9c6a" opacity="0.8"/>
+                <path d="M115 62 Q120 42 130 40 Q134 55 124 68" fill="#8fa87d" opacity="0.7"/>
+                <line x1="85" y1="65" x2="87" y2="88" stroke="#a09070" stroke-width="1.2"/>
+                <line x1="106" y1="58" x2="100" y2="87" stroke="#a09070" stroke-width="1.2"/>
+                <line x1="122" y1="68" x2="115" y2="89" stroke="#a09070" stroke-width="1.2"/>
+                <path d="M80 115 Q100 108 120 115" fill="none" stroke="#c4a882" stroke-width="1" opacity="0.6"/>
+                <path d="M73 130 Q100 120 127 130" fill="none" stroke="#c4a882" stroke-width="1" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-badge">
+          <span>Sommelier<br/>de Chá</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS DE CHÁ -->
+  <section class="chas" id="chás">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Nossa Seleção</span>
+        <h2>Famílias de Chá</h2>
+        <p>Cada família tem características únicas, culturas de origem e benefícios distintos.</p>
+      </div>
+      <div class="chas-grid">
+        <div class="cha-card" data-delay="0">
+          <div class="cha-icon green">
+            <svg viewBox="0 0 60 60"><ellipse cx="30" cy="35" rx="18" ry="8" fill="currentColor" opacity="0.15"/><path d="M22 28 Q20 12 30 8 Q40 12 38 28 Q34 36 30 38 Q26 36 22 28Z" fill="currentColor" opacity="0.9"/></svg>
+          </div>
+          <h3>Chás Verdes</h3>
+          <p>Frescos, vegetais e cheios de antioxidantes. Do Japão ao interior da China, uma infinidade de perfis.</p>
+          <span class="cha-count">24 opções</span>
+        </div>
+        <div class="cha-card" data-delay="100">
+          <div class="cha-icon amber">
+            <svg viewBox="0 0 60 60"><ellipse cx="30" cy="38" rx="18" ry="8" fill="currentColor" opacity="0.15"/><path d="M20 32 Q22 18 30 14 Q38 18 40 32 Q38 42 30 44 Q22 42 20 32Z" fill="currentColor" opacity="0.9"/></svg>
+          </div>
+          <h3>Chás Pretos</h3>
+          <p>Robustos e encorpados. Darjeeling, Assam, Ceilão — cada origem com sua assinatura inconfundível.</p>
+          <span class="cha-count">18 opções</span>
+        </div>
+        <div class="cha-card" data-delay="200">
+          <div class="cha-icon blue">
+            <svg viewBox="0 0 60 60"><path d="M18 30 Q20 15 30 12 Q40 15 42 30 Q40 44 30 46 Q20 44 18 30Z" fill="currentColor" opacity="0.8"/><path d="M24 26 Q30 20 36 26" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/></svg>
+          </div>
+          <h3>Chás Oolong</h3>
+          <p>Entre o verde e o preto, com complexidade floral e frutada. A joia da tradição taiwanesa.</p>
+          <span class="cha-count">14 opções</span>
+        </div>
+        <div class="cha-card" data-delay="300">
+          <div class="cha-icon silver">
+            <svg viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="16" ry="10" fill="currentColor" opacity="0.3"/><ellipse cx="30" cy="26" rx="12" ry="8" fill="currentColor" opacity="0.6"/><ellipse cx="30" cy="23" rx="8" ry="5" fill="currentColor" opacity="0.9"/></svg>
+          </div>
+          <h3>Chás Brancos</h3>
+          <p>Delicados e suaves, pouco processados. Silver Needle e White Peony da província de Fujian.</p>
+          <span class="cha-count">8 opções</span>
+        </div>
+        <div class="cha-card" data-delay="400">
+          <div class="cha-icon earth">
+            <svg viewBox="0 0 60 60"><rect x="14" y="24" width="32" height="22" rx="4" fill="currentColor" opacity="0.8"/><rect x="18" y="18" width="24" height="10" rx="2" fill="currentColor" opacity="0.5"/><line x1="22" y1="32" x2="38" y2="32" stroke="white" stroke-width="1.5" opacity="0.5"/><line x1="22" y1="38" x2="38" y2="38" stroke="white" stroke-width="1.5" opacity="0.5"/></svg>
+          </div>
+          <h3>Chás Pu-erh</h3>
+          <p>Fermentados e envelhecidos, com notas terrosas únicas. Alguns prensados têm décadas de maturação.</p>
+          <span class="cha-count">10 opções</span>
+        </div>
+        <div class="cha-card" data-delay="500">
+          <div class="cha-icon herbal">
+            <svg viewBox="0 0 60 60"><circle cx="30" cy="28" r="14" fill="currentColor" opacity="0.2"/><path d="M22 22 Q30 12 38 22 Q42 30 30 38 Q18 30 22 22Z" fill="currentColor" opacity="0.9"/></svg>
+          </div>
+          <h3>Infusões Herbais</h3>
+          <p>Camomila, hortelã, hibisco, lavanda e muito mais. Sem cafeína, cheios de bem-estar e aroma.</p>
+          <span class="cha-count">16 opções</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU DESTAQUE -->
+  <section class="menu" id="menu">
+    <div class="menu-bg"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="label">Nosso Menu</span>
+        <h2>Uma Experiência Completa</h2>
+        <p>Além dos chás, oferecemos uma seleção de acompanhamentos artesanais.</p>
+      </div>
+      <div class="menu-tabs">
+        <button class="tab active" data-tab="chas">Chás & Infusões</button>
+        <button class="tab" data-tab="doces">Doces & Salgados</button>
+        <button class="tab" data-tab="rituais">Rituais de Chá</button>
+      </div>
+      <div class="menu-content" id="tab-chas">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Darjeeling First Flush</span>
+              <span class="menu-price">R$ 28</span>
+            </div>
+            <p>Colheita da primavera, floral e muscatel. Origem: West Bengal, Índia.</p>
+            <span class="menu-tag">Preto · Médio</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Gyokuro Reserva</span>
+              <span class="menu-price">R$ 45</span>
+            </div>
+            <p>Sombreado por 3 semanas, doce e rico em umami. Uji, Japão.</p>
+            <span class="menu-tag">Verde · Suave</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Dong Ding Oolong</span>
+              <span class="menu-price">R$ 38</span>
+            </div>
+            <p>Levemente torrado, notas de mel e orquídea. Nantou, Taiwan.</p>
+            <span class="menu-tag">Oolong · Complexo</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Silver Needle White</span>
+              <span class="menu-price">R$ 52</span>
+            </div>
+            <p>Só brotos cobertos de pelo prateado. Fujian, China. Delicadíssimo.</p>
+            <span class="menu-tag">Branco · Delicado</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Matcha Cerimonial</span>
+              <span class="menu-price">R$ 42</span>
+            </div>
+            <p>Preparado à mão com chasen. Uji, Japão. Cremoso e vibrante.</p>
+            <span class="menu-tag">Verde · Intenso</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Blend da Casa</span>
+              <span class="menu-price">R$ 24</span>
+            </div>
+            <p>Criação exclusiva: rooibos, hibisco e casca de laranja. Quente ou gelado.</p>
+            <span class="menu-tag">Herbal · Frutal</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-content hidden" id="tab-doces">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Scones Ingleses</span>
+              <span class="menu-price">R$ 32</span>
+            </div>
+            <p>Acompanhados de creme clotted, geleia de morango artesanal e manteiga.</p>
+            <span class="menu-tag">Clássico · Para 1</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Afternoon Tea Set</span>
+              <span class="menu-price">R$ 85</span>
+            </div>
+            <p>Três andares: sanduíches, scones e petit fours. Chá da sua escolha incluso.</p>
+            <span class="menu-tag">Completo · Para 1</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Bolo de Matcha</span>
+              <span class="menu-price">R$ 26</span>
+            </div>
+            <p>Massa úmida com ganache branca e pó de matcha cerimonial. Sem glúten.</p>
+            <span class="menu-tag">Doce · Japonês</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Madeleine com Lavanda</span>
+              <span class="menu-price">R$ 18</span>
+            </div>
+            <p>Trio de madeleines amanteigadas com infusão de lavanda francesa. Fresco do forno.</p>
+            <span class="menu-tag">Doce · Floral</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Sanduíches Clássicos</span>
+              <span class="menu-price">R$ 38</span>
+            </div>
+            <p>Pepino e cream cheese, salmão defumado, rosbife com mostarda dijon. Sem casca.</p>
+            <span class="menu-tag">Salgado · Leve</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Cheesecake de Earl Grey</span>
+              <span class="menu-price">R$ 29</span>
+            </div>
+            <p>Base de biscoito amanteigado, recheio com infusão de Earl Grey e bergamota.</p>
+            <span class="menu-tag">Doce · Cítrico</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-content hidden" id="tab-rituais">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Cerimônia do Chá Japonês</span>
+              <span class="menu-price">R$ 180</span>
+            </div>
+            <p>Experiência completa de 45 minutos: preparo de matcha com todos os utensílios tradicionais. Para 2 pessoas.</p>
+            <span class="menu-tag">Ritual · Para 2</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Gongfu Cha Chinês</span>
+              <span class="menu-price">R$ 160</span>
+            </div>
+            <p>Arte do chá concentrado em múltiplas infusões curtas. Com guia especializado. Para 2 pessoas.</p>
+            <span class="menu-tag">Ritual · Para 2</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Afternoon Tea Completo</span>
+              <span class="menu-price">R$ 240</span>
+            </div>
+            <p>Serviço à inglesa completo: três andares, chá ilimitado da seleção clássica. Para 2 pessoas.</p>
+            <span class="menu-tag">Ritual · Para 2</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-name">Degustação de Chás</span>
+              <span class="menu-price">R$ 120</span>
+            </div>
+            <p>Jornada por 5 chás de famílias diferentes com harmonizações e explicações da sommelier. Para 1.</p>
+            <span class="menu-tag">Degustação · Para 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Atmosfera</span>
+        <h2>Nossos Espaços</h2>
+      </div>
+      <div class="galeria-grid">
+        <div class="gal-card tall">
+          <div class="gal-inner gal-1">
+            <div class="gal-label">Salão Principal</div>
+          </div>
+        </div>
+        <div class="gal-card">
+          <div class="gal-inner gal-2">
+            <div class="gal-label">Jardim Interno</div>
+          </div>
+        </div>
+        <div class="gal-card">
+          <div class="gal-inner gal-3">
+            <div class="gal-label">Sala Privativa</div>
+          </div>
+        </div>
+        <div class="gal-card wide">
+          <div class="gal-inner gal-4">
+            <div class="gal-label">Balcão de Chás</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depos">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">O Que Dizem</span>
+        <h2>Nossos Hóspedes</h2>
+      </div>
+      <div class="depos-grid">
+        <div class="depo">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"A cerimônia japonesa foi uma das experiências mais memoráveis que já tive em Brasília. Ana Luísa conhece cada chá como se fosse um filho."</p>
+          <div class="depo-author">
+            <div class="avatar">ML</div>
+            <div>
+              <strong>Mariana Lima</strong>
+              <span>Brasília, DF</span>
+            </div>
+          </div>
+        </div>
+        <div class="depo">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Descobri o mundo dos chás pu-erh aqui. O ambiente é sereno, o serviço é impecável e cada visita é uma nova jornada sensorial."</p>
+          <div class="depo-author">
+            <div class="avatar">RC</div>
+            <div>
+              <strong>Rafael Cardoso</strong>
+              <span>Goiânia, GO</span>
+            </div>
+          </div>
+        </div>
+        <div class="depo">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Fiz meu aniversário na sala privativa com o afternoon tea completo. Foi sublime. Um lugar único na capital federal."</p>
+          <div class="depo-author">
+            <div class="avatar">FO</div>
+            <div>
+              <strong>Fernanda Oliveira</strong>
+              <span>Lago Norte, DF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO / RESERVA -->
+  <section class="contato" id="contato">
+    <div class="container split">
+      <div class="split-text">
+        <span class="label">Visite-nos</span>
+        <h2>Reserve<br/>sua Mesa</h2>
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-icon">&#128205;</div>
+            <div>
+              <strong>Endereço</strong>
+              <span>SCES Trecho 2, Bloco D, Lote 19<br/>Asa Sul — Brasília, DF</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#128336;</div>
+            <div>
+              <strong>Horário</strong>
+              <span>Ter–Sex: 10h às 20h<br/>Sáb–Dom: 9h às 21h</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#128222;</div>
+            <div>
+              <strong>Telefone</strong>
+              <span>(61) 3248-0900</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#9993;</div>
+            <div>
+              <strong>E-mail</strong>
+              <span>reservas@casadechadf.com.br</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3>Solicitar Reserva</h3>
+        <div class="form-group">
+          <label>Seu nome</label>
+          <input type="text" placeholder="Nome completo" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" placeholder="seu@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" placeholder="(61) 9 0000-0000" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Data</label>
+            <input type="date" />
+          </div>
+          <div class="form-group">
+            <label>Pessoas</label>
+            <select>
+              <option>1 pessoa</option>
+              <option>2 pessoas</option>
+              <option>3 a 4 pessoas</option>
+              <option>5 a 8 pessoas</option>
+              <option>Grupo maior</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Experiência desejada</label>
+          <select>
+            <option>Visita simples</option>
+            <option>Afternoon Tea</option>
+            <option>Cerimônia Japonesa</option>
+            <option>Gongfu Cha Chinês</option>
+            <option>Degustação Guiada</option>
+            <option>Evento Especial</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Observações</label>
+          <textarea placeholder="Restrições alimentares, ocasião especial, pedidos..."></textarea>
+        </div>
+        <button class="btn-primary full" id="btn-reserva">Solicitar Reserva</button>
+        <p class="form-note">Confirmação em até 24h. Reservas sujeitas à disponibilidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo">
+            <span class="logo-icon">&#9670;</span>
+            <span>Casa de Chá <em>DF</em></span>
+          </a>
+          <p>Um ritual de prazer no coração de Brasília. Mais de 80 chás raros do mundo inteiro.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">In</a>
+            <a href="#" aria-label="Facebook">Fb</a>
+            <a href="#" aria-label="WhatsApp">Wpp</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Menu</h4>
+          <a href="#sobre">Sobre nós</a>
+          <a href="#chás">Nossos Chás</a>
+          <a href="#menu">Menu Completo</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contato">Reservas</a>
+        </div>
+        <div class="footer-links">
+          <h4>Experiências</h4>
+          <a href="#menu">Afternoon Tea</a>
+          <a href="#menu">Cerimônia Japonesa</a>
+          <a href="#menu">Gongfu Cha</a>
+          <a href="#menu">Degustação Guiada</a>
+          <a href="#contato">Eventos Privados</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contato</h4>
+          <span>SCES Trecho 2, Bloco D</span>
+          <span>Asa Sul, Brasília – DF</span>
+          <span>(61) 3248-0900</span>
+          <span>reservas@casadechadf.com.br</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Casa de Chá do Distrito Federal. Todos os direitos reservados.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span>&#10003;</span> Reserva solicitada! Entraremos em contato em breve.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
